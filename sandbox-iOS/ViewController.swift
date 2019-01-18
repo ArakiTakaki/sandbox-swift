@@ -21,6 +21,12 @@ class ViewController: UIViewController {
     
     //MARK: Action
     @IBAction func UIButton(_ sender: Any) {
+        
+        // TextFieldの値を取得する
+        let tmp = nameTextField.text
+
+        // Labelの名前を変更する。
+        mealNameLabel.text = tmp        
     }
     
 }
