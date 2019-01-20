@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var mealNameLabel: UILabel!
+    @IBOutlet weak var tfProjectName: UITextField!
+    @IBOutlet weak var tvProjectName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +20,12 @@ class ViewController: UIViewController {
     }
     
     //MARK: Action
-    @IBAction func UIButton(_ sender: Any) {
+    @IBAction func btOnSave(_ sender: Any) {
+        tvProjectName.text = tfProjectName.text
+        let stringURL = "https://api.github.com/orgs/octokit/repos"
+        let url = URL(string: stringURL)
+        let req = URLRequest(url: url)
         
-        // TextFieldの値を取得する
-        let tmp = nameTextField.text
-
-        // Labelの名前を変更する。
-        mealNameLabel.text = tmp        
     }
-    
 }
 
